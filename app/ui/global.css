@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --gray-1: #f8fafb;
+  --gray-2: #f2f4f6;
+  --gray-3: #e8ecef;
+  --gray-4: #98a9bc;
+  --gray-5: #778ca2;
+  --gray-6: #424242;
+  --gray-7: #212121;
+}
+
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

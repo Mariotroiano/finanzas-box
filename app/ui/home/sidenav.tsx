@@ -4,10 +4,10 @@ import Link from 'next/link';
 import AcmeLogo from '@/app/ui/acme-logo';
 
 const navItems = [
-  { name: 'Dashboard', href: '/' },
-  { name: 'Team', href: '/team' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Calendar', href: '/calendar' },
+  { name: 'Home', href: '/' },
+  { name: 'Contacto', href: '/contact' },
+  { name: 'Herramientas', href: '/tools' },
+  // { name: 'Calendar', href: '/calendar' },
 ];
 
 export default function NavBar() {
@@ -16,6 +16,10 @@ export default function NavBar() {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleNavItemClick = () => {
+    setIsMobileMenuOpen(false);
   };
 
   useEffect(() => {
@@ -59,7 +63,7 @@ export default function NavBar() {
           </div>
 
           {/* Logo a la izquierda */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 hidden sm:block">
             <Link href="/" className="flex items-center">
               <div className="w-50 text-gray-4">
                 <AcmeLogo />
@@ -77,6 +81,7 @@ export default function NavBar() {
                     href={item.href}
                     className="rounded-md px-3 py-2 text-sm font-medium text-gray-4 hover:bg-gray-4 hover:text-white"
                     aria-current={item.href === currentPath ? 'page' : undefined}
+
                   >
                     {item.name}
                   </Link>
@@ -105,6 +110,7 @@ export default function NavBar() {
               href={item.href}
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
               aria-current={item.href === currentPath ? 'page' : undefined}
+              onClick={handleNavItemClick} 
             >
               {item.name}
             </Link>

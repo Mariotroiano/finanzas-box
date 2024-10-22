@@ -1,6 +1,7 @@
 import OrganizationCards from "./ui/organization-cards";
 import BrokerCards from "./ui/broker-cards";
 import QuoteComponent from "./ui/home/quote";
+import ContactCard from "./ui/wp-section";
 
 export default function Page() {
   return (
@@ -20,6 +21,7 @@ export default function Page() {
       <QuoteComponent />
       <OrganizationCards />
       <BrokerCards />
+      <ContactCard/>
 
     </main>
   );

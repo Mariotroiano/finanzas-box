@@ -18,7 +18,7 @@ const organizations = [
 
 export default function OrganizationCards() {
   return (
-    <div className="flex flex-wrap justify-center gap-10 py-10 px-4 bg-gray-100 mt-10 mb-10">
+    <div className="flex flex-wrap justify-center gap-10 py-10 px-4 bg-gray-1 mt-10 mb-10">
       {organizations.map((organization) => (
         <div 
           key={organization.name} 

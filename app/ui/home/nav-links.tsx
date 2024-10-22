@@ -10,7 +10,7 @@ import {
 const links = [
   { name: 'Home', href: '/home', icon: HomeIcon },
   {
-    name: 'Contacto',
+    name: 'Consultas',
     href: '/contact',
     icon: DocumentDuplicateIcon,
   },

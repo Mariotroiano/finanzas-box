@@ -3,24 +3,28 @@ import React from 'react';
 const brokers = [
   {
     name: "Inviu",
-    image: "/inviu.png", // Asegúrate de tener esta imagen en tu proyecto
+    image: "/inviu.png", 
     description: "Simplifica tu acceso a los mercados financieros con Inviu. La plataforma perfecta para inversores principiantes que buscan una solución rápida y moderna.",
+    link: 'https://www.inviu.com.ar/asesores/m-cipriano-inviu'
   },
   {
     name: "Balanz",
-    image: "/balanz.jpg", // Asegúrate de tener esta imagen en tu proyecto
+    image: "/balanz.jpg",
     description: "Con Balanz, tienes una plataforma robusta que te brinda herramientas avanzadas para gestionar tu portafolio de inversiones de forma eficiente.",
+    link: 'https://balanz.com/abrir-cuenta-2.aspx?reference=mcipriano@ap.balanz.com'
   },
   {
     name: "Bull Market",
-    image: "/bull-market.jpg", // Asegúrate de tener esta imagen en tu proyecto
+    image: "/bull-market.jpg",
     description: "Accede a una amplia variedad de activos con Bull Market, una solución ágil que te conecta con oportunidades en tiempo real.",
+    link: 'https://bullmarketbrokers.com/Apertura/BullMarketBrokers?ID=MjQxNzY4'
+
   },
 ];
 
 export default function BrokerCards() {
   return (
-    <div className="bg-gray-1 py-10 px-4 mt-20">
+    <div className="bg-gray-1 py-10 px-4 ">
       <h2 className="text-4xl font-bold text-gray-4 text-center mb-6">
         TRABAJAMOS DE MANERA INDEPENDIENTE<br />
         <div style={{height: '20px'}}></div>
@@ -37,9 +41,11 @@ export default function BrokerCards() {
                 {broker.description}
               </p>
               <div className="text-center">
-                <button className="bg-gray-4 hover:bg-gray-5 text-white font-bold py-2 px-4 rounded-full w-full">
-                  ABRIR CUENTA GRATIS
-                </button>
+                <a href={broker.link} target="_blank" rel="noopener noreferrer">
+                  <button className="bg-gray-4 hover:bg-gray-5 text-white font-bold py-2 px-4 rounded-full w-full">
+                    ABRIR CUENTA GRATIS
+                  </button>
+                </a>
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ import AcmeLogo from '@/app/ui/acme-logo';
 
 const navItems = [
   { name: 'Home', href: '/' },
-  { name: 'Contacto', href: '/contact' },
+  { name: 'Consultas', href: '/contact' },
   { name: 'Herramientas', href: '/tools' },
   // { name: 'Calendar', href: '/calendar' },
 ];

@@ -3,25 +3,27 @@ import React from 'react';
 
 const QuoteComponent = () => {
   return (
-    <div className="max-w-6xl mx-auto mt-20 px-4"> {/* Contenedor externo para controlar el margen superior */}
-      <div className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden"> 
-        <div className="md:w-1/2 relative w-full h-80 md:h-96"> {/* Ajustada la altura en mobile */}
+    <main className='flex bg-gray-1 p-6 mt-5'>
+    <div className="max-w-6xl mx-auto"> 
+      <div className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden" > 
+        <div className="md:w-1/2 relative w-full h-80 md:h-96"> 
           <Image
-            src="/Mauro-cipriano-finanzas.jpg" 
+            src="/mauro-cipriano-finanzas-box.jpeg" 
             alt="Mauro Cipriano"
-            layout="fill" // Usar layout fill para que la imagen se ajuste al contenedor
-            objectFit="cover" // Mantiene la proporción y recorta la imagen si es necesario
+            fill
+            objectFit="cover" 
             className="rounded-l-lg"
           />
         </div>
-        <div className="md:w-1/2 p-6 flex flex-col justify-center"> {/* Padding interno */}
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Finanzas Box Founder</h2> {/* Tamaño de texto ajustado */}
+        <div className="md:w-1/2 p-6 flex flex-col justify-center"> 
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Fundador de Finanzas Box</h2> 
           <p className="text-base md:text-lg text-gray-600">
             Soy Mauro Cipriano, Licenciado en Administración por la Universidad de Buenos Aires y Asesor Idóneo por la Comisión Nacional de Valores, Matrícula Nº1939.
           </p>
         </div>
       </div>
     </div>
+    </main>
   );
 };
 

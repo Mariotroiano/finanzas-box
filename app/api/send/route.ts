@@ -17,11 +17,14 @@ export async function POST(request: Request) {
     });
 
     if (error) {
+      console.log({error})
       return NextResponse.json({ error: 'Error al enviar el correo. Inténtalo de nuevo más tarde.' }, { status: 500 });
     }
 
     return NextResponse.json({ message: 'Correo enviado con éxito', data });
   } catch (error) {
+    console.log({error})
+
     return NextResponse.json({ error: 'Error en el servidor. Por favor, intenta nuevamente.' }, { status: 500 });
   }
 }

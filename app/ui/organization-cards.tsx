@@ -18,29 +18,29 @@ const organizations = [
 
 export default function OrganizationCards() {
   return (
-    <div className="flex flex-wrap justify-center gap-10 py-10 px-4 bg-gray-1 mt-10 mb-10">
+    <div className="flex flex-wrap justify-center items-center gap-10 py-10 px-4 bg-gray-1 mt-10 mb-10"> {/* Asegura el centrado */}
       {organizations.map((organization) => (
         <div 
           key={organization.name} 
-          className="bg-white rounded-lg overflow-hidden shadow-lg transform transition hover:scale-105 hover:shadow-2xl flex flex-col md:flex-row w-full md:max-w-2xl lg:max-w-3xl h-[400px]" // Altura fija
+          className="bg-white rounded-lg overflow-hidden shadow-lg transform transition hover:scale-105 hover:shadow-2xl flex flex-col items-center md:flex-row md:items-start w-full md:max-w-2xl lg:max-w-3xl h-auto md:h-[400px]" // Altura fija solo en pantallas grandes
         >
-          <div className="relative w-full md:w-1/2 h-full">
+          <div className="relative w-full md:w-1/2 h-64 md:h-full"> {/* Altura ajustada para pantallas pequeñas */}
             <Image 
-              className="object-contain w-full h-full" // Cambiado a contain
+              className="object-contain w-full h-full" // Asegura el ajuste de la imagen
               src={organization.image} 
               alt={organization.name} 
-              layout="fill" // Usar layout fill para que la imagen se ajuste
-              objectFit="contain" // Asegurarse de que la imagen no se recorte
+              layout="fill" 
+              objectFit="contain" 
             />
           </div>
-          <div className="p-6 flex-1 flex flex-col justify-between">
+          <div className="p-6 flex-1 flex flex-col justify-between items-center text-center md:text-left md:items-start"> {/* Centrado en mobile */}
             <div>
               <h3 className="font-bold text-lg md:text-2xl mb-2 text-gray-800">{organization.name}</h3>
               <p className="text-gray-600 text-base mb-4">
                 {organization.description}
               </p>
             </div>
-            <div className="text-center">
+            <div className="w-full">
               <a 
                 href={organization.link} 
                 target="_blank" 

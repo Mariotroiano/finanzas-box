@@ -33,3 +33,25 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(80px); /* Viene desde más abajo */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-20px); /* Se coloca un poco más arriba */
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1.2s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  .mobile\:mt-8 {
+    margin-top: 2rem; /* Ajuste para que el texto esté más arriba en móviles */
+  }
+}

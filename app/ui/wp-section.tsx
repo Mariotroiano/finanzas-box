@@ -1,25 +1,25 @@
 'use client';
 
 import React from 'react';
-import { FaWhatsapp } from 'react-icons/fa'; // Asegúrate de instalar react-icons
+import { FaWhatsapp } from 'react-icons/fa';
 
 const ContactCard = () => {
-  const whatsappLink = 'https://api.whatsapp.com/send/?phone=526241376483&text&type=phone_number&app_absent=0'; // Reemplaza con tu número
+  const whatsappLink = 'https://api.whatsapp.com/send?phone=541165433847&text=Hola%2C%20quiero%20mas%20informaci%C3%B3n%20para%20invertir%20en%20bolsa';
 
   return (
-    <main className='flex bg-gray-1 p-6 mt-5 mb-5'>
-      <div className="bg-white rounded-lg shadow-lg p-10 flex flex-col items-center max-w-lg mx-auto my-4 h-80"> {/* Cambiado a max-w-lg y h-80 para mayor tamaño */}
-        <h2 className="text-2xl font-bold mb-4 text-center">¡ESCRIBENOS PARA QUE TE ASESOREMOS GRATIS!</h2> {/* Aumentado a text-2xl */}
-        <div className="text-center mb-4">
-          <p className="text-gray-700 text-center text-lg">Estamos aquí para ayudarte. Haz clic en el icono de WhatsApp para contactarnos.</p> {/* Aumentado a text-lg */}
-        </div>
+    <main className='flex justify-center p-6 mt-5 mb-5 bg-gray-100'>
+      <div className="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center max-w-lg mx-auto min-h-[120px] sm:min-h-[300px]">
+        <h2 className="text-2xl font-bold mb-4 text-center">¡ESCRÍBENOS PARA QUE TE ASESOREMOS GRATIS!</h2>
+        <p className="text-gray-700 text-center text-lg mb-6">
+          Estamos aquí para ayudarte. Haz clic en el icono de WhatsApp para contactarnos.
+        </p>
         <a
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full" // Aumentado px a 8
+          className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full w-full sm:w-auto transition duration-200"
         >
-          <FaWhatsapp className="mr-2" /> {/* Icono de WhatsApp */}
+          <FaWhatsapp className="mr-2" />
           Escríbenos
         </a>
       </div>

@@ -5,20 +5,23 @@ const brokers = [
     name: "Inviu",
     image: "/inviu.png", 
     description: "Simplifica tu acceso a los mercados financieros con Inviu. La plataforma perfecta para inversores principiantes que buscan una solución rápida y moderna.",
-    link: 'https://www.inviu.com.ar/asesores/m-cipriano-inviu'
+    link: 'https://www.inviu.com.ar/asesores/m-cipriano-inviu',
+    alic: 'ALYC Nº205 CNV'
   },
   {
     name: "Balanz",
     image: "/balanz.jpg",
     description: "Con Balanz, tienes una plataforma robusta que te brinda herramientas avanzadas para gestionar tu portafolio de inversiones de forma eficiente.",
-    link: 'https://balanz.com/abrir-cuenta-2.aspx?reference=mcipriano@ap.balanz.com'
+    link: 'https://balanz.com/abrir-cuenta-2.aspx?reference=mcipriano@ap.balanz.com',
+    alic: 'ALYC Nº210 CNV'
+
   },
   {
     name: "Bull Market",
     image: "/bull-market.jpg",
     description: "Accede a una amplia variedad de activos con Bull Market, una solución ágil que te conecta con oportunidades en tiempo real.",
-    link: 'https://bullmarketbrokers.com/Apertura/BullMarketBrokers?ID=MjQxNzY4'
-
+    link: 'https://bullmarketbrokers.com/Apertura/BullMarketBrokers?ID=MjQxNzY4',
+    alic: 'ALYC Nº247 CNV'
   },
 ];
 
@@ -37,6 +40,7 @@ export default function BrokerCards() {
             <img className="w-full h-48 object-cover" src={broker.image} alt={broker.name} />
             <div className="p-6">
               <h3 className="font-bold text-xl mb-3 text-gray-4">{broker.name}</h3>
+              <h4 className='text-gray-4'>{broker.alic}</h4>
               <p className="text-gray-4 text-base mb-6 min-h-[150px]">
                 {broker.description}
               </p>
